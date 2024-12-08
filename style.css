@@ -5,11 +5,15 @@ body {
   height: 100%; /* Garante que a altura cubra a tela inteira */
   display: flex;
   flex-direction: column;
-  background: rgb(228, 223, 223);
+  background: rgb(26, 23, 54);
   font-family: "Poppins";
 }
 h1 {
   text-align: center;
+  color: antiquewhite;
+  background-color: blueviolet;
+  border-radius: 90px;
+  margin: 30px;
 }
 
 footer {
@@ -19,12 +23,23 @@ footer {
   text-align: center; /* Centraliza o texto */
   padding: 1rem; /* Adiciona espaço interno */
 }
-ul {
-  text-align: start;
+li {
+  list-style: none;
+}
+.container-quiz {
+  background-color: blueviolet;
+  border-radius: 10px;
+  margin: 30px 30px; /* Reduza para o tamanho que quiser */
+  padding: 10px;
 }
 
-.todas {
-  text-transform: uppercase;
-  list-style-type: none;
-  margin-top: 10px;
+button {
+  background: green;
+  padding: 8px;
+  border-radius: 6px;
+  font-weight: bold;
+}
+button:hover {
+  padding: 10px;
+  background: rgb(6, 152, 6);
 }

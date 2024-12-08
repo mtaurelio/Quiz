@@ -7,27 +7,70 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-  <title>Check list Interativo</title>
+  <title>Quiz de Programação</title>
 </head>
 
 <body>
 
   <header>
-    <h1>Meu Check List Diário</h1>
+    <h1>Quiz de Programação</h1>
   </header>
   <main>
-    <p>Tarefas diárias (ao acordar)</p>
-    <ul class="checkbox">
-      <li>Escovar os dentes <input type="checkbox"></li>
-      <li>Arrumar a cama <input type="checkbox"></li>
-      <li>Beber água <input type="checkbox"></li>
-      <li>Trocar de roupa <input type="checkbox"></li>
-      <li>Preparar o café da manhã <input type="checkbox"></li>
-      <li class="todas">Marcar todas as alternativas <input type="checkbox"></li>
-    </ul>
+    <div class="container-quiz">
+      <p>1° Qual tag HTML usamos para criar um link?</p>
+      <ul>
+        <li>
+          <input type="radio" name="pergunta1" id="link1" value="correta">
+          <label for="link1">&lt;a&gt;</label>
+        </li>
+        <li>
+          <input type="radio" name="pergunta1" id="link2" value="errada">
+          <label for="link2">&lt;p&gt;</label>
+        </li>
+        <li>
+          <input type="radio" name="pergunta1" id="link3" value="errada">
+          <label for="link3">&lt;div&gt;</label>
+        </li>
+      </ul>
+
+      <p>2° Como adicionamos um estilo em linha em um elemento HTML?</p>
+      <ul>
+        <li>
+          <input type="radio" name="pergunta2" id="estilo1" value="errada">
+          <label for="estilo1">class="estilo"</label>
+        </li>
+        <li>
+          <input type="radio" name="pergunta2" id="estilo2" value="correta">
+          <label for="estilo2">style="color: red;"</label>
+        </li>
+        <li>
+          <input type="radio" name="pergunta2" id="estilo3" value="errada">
+          <label for="estilo3">id="estilo"</label>
+        </li>
+      </ul>
+
+      <p>3° Qual método JavaScript é usado para remover o último elemento de um array?</p>
+      <ul>
+        <li>
+          <input type="radio" name="pergunta3" id="metodo1" value="correta">
+          <label for="metodo1">pop()</label>
+        </li>
+        <li>
+          <input type="radio" name="pergunta3" id="metodo2" value="errada">
+          <label for="metodo2">push()</label>
+        </li>
+        <li>
+          <input type="radio" name="pergunta3" id="metodo3" value="errada">
+          <label for="metodo3">shift()</label>
+        </li>
+      </ul>
+
+      <button id="verificar">Verificar Respostas</button>
+    </div>
   </main>
 
-  <footer>Todos os diretos reservados</footer>
+
+  <footer>Todos os diretos reservados. <span>Matheus Aurelio</span></footer>
   <script src="./script.js"></script>
 </body>
 

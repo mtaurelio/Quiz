@@ -1,29 +1,24 @@
-// Seleciona todos os checkboxes
-const checkboxes = document.querySelectorAll(
-  '.checkbox input[type="checkbox"]'
-);
+document.getElementById("verificar").addEventListener("click", () => {
+  let pontuacao = 0;
 
-// Seleciona o checkbox "Marcar todas as alternativas"
-const marcarTodas = document.querySelector('.todas input[type="checkbox"]');
-
-// Adiciona um evento ao checkbox "Marcar todas"
-marcarTodas.addEventListener("change", () => {
-  // Define o estado de todos os checkboxes com base no checkbox "Marcar todas"
-  checkboxes.forEach((checkbox) => {
-    checkbox.checked = marcarTodas.checked;
-  });
-});
-
-// Adiciona um evento aos outros checkboxes para sincronizar o estado
-checkboxes.forEach((checkbox) => {
-  if (checkbox !== marcarTodas) {
-    checkbox.addEventListener("change", () => {
-      // Verifica se todos os outros checkboxes estão marcados
-      const todosMarcados = Array.from(checkboxes).every(
-        (item) => item.checked
-      );
-      // Atualiza o estado do checkbox "Marcar todas"
-      marcarTodas.checked = todosMarcados;
-    });
+  // Verifica a resposta da pergunta 1
+  const resposta1 = document.querySelector('input[name="pergunta1"]:checked');
+  if (resposta1 && resposta1.value === "correta") {
+    pontuacao++;
   }
+
+  // Verifica a resposta da pergunta 2
+  const resposta2 = document.querySelector('input[name="pergunta2"]:checked');
+  if (resposta2 && resposta2.value === "correta") {
+    pontuacao++;
+  }
+
+  // Verifica a resposta da pergunta 3
+  const resposta3 = document.querySelector('input[name="pergunta3"]:checked');
+  if (resposta3 && resposta3.value === "correta") {
+    pontuacao++;
+  }
+
+  // Exibe o resultado
+  alert(`Você acertou ${pontuacao} de 3 perguntas!`);
 });
